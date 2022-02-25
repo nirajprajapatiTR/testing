@@ -10,10 +10,16 @@ on:
   pull_request:
     branches: [ main ]
     
+    
+ env:
+             Greeting: Hello
+             DAY_OF_WEEK: monday
+             First_Name: niraj
+    
 
 
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -31,10 +37,7 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
         
-        env:
-             Greeting: Hello
-             DAY_OF_WEEK: monday
-             First_Name: niraj
+  
     
       - name: "Say Hello Mona it's Monday"
         run: echo $Greeting $First_Name. Today is $DAY_OF_WEEK!
