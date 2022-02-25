@@ -10,10 +10,7 @@ on:
   pull_request:
     branches: [ main ]
    
-  env:
-   Greeting: Hello
-   DAY_OF_WEEK: monday
-   First_Name: niraj
+  
     
   workflow_dispatch:
 
@@ -29,6 +26,11 @@ jobs:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
+    env:
+     Greeting: Hello
+     DAY_OF_WEEK: monday
+     First_Name: niraj
+   
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
