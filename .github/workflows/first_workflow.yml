@@ -42,8 +42,6 @@ jobs:
       - name: create dir
         run: mkdir /tmp/artifacts
         
-      - name: create dir 2
-        run: mkdir /test/artifact
         
       - name: crete file
         run: mkfile /tmp/artifacts/1.txt
