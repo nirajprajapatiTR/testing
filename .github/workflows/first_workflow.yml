@@ -39,8 +39,14 @@ jobs:
           echo test, and deploy your project.
           echo $Greeting $First_Name. Today is $DAY_OF_WEEK!
           
-      - name: Run a multi-line script
+      - name: create dir
         run: mkdir /tmp/artifacts
+        
+      - name: create dir 2
+        run: mkdir /test/artifact
+        
+      - name: crete file
+        run: mkfile /tmp/artifacts/1.txt
         
       - name: Copy file
       # You may pin to the exact commit or the version.
@@ -48,7 +54,7 @@ jobs:
         uses: canastro/copy-action@0.0.2
         with:
           # Source file
-          source: /.
+          source: /tmp/artifacts/1.txt
           # Target file
-          target: /tmp/artifacts
+          target: /test/artifact
 
