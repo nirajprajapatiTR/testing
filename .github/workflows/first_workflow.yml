@@ -40,5 +40,15 @@ jobs:
           echo $Greeting $First_Name. Today is $DAY_OF_WEEK!
           
       - name: Run a multi-line script
-        run: mkdir downloads
+        run: mkdir /tmp/artifacts
         
+ #      - name: Copy file
+ #      # You may pin to the exact commit or the version.
+ #      # uses: canastro/copy-action@7ddff6fc153a2ea2cd0fb88ed9750544c051e399
+ #        uses: canastro/copy-action@0.0.2
+ #        with:
+ #          # Source file
+ #          source: 
+ #          # Target file
+ #          target: 
+
