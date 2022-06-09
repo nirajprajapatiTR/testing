@@ -42,17 +42,11 @@ jobs:
       - name: create dir
         run: mkdir /tmp/artifacts
         
+      - uses: "finnp/create-file-action@master"
+        env:
+          FILE_NAME: "dir/fileName.txt"
+          FILE_DATA: "file content" 
+  
         
-      - name: crete file
-        run: mkfile /tmp/artifacts/1.txt
-        
-      - name: Copy file
-      # You may pin to the exact commit or the version.
-      # uses: canastro/copy-action@7ddff6fc153a2ea2cd0fb88ed9750544c051e399
-        uses: canastro/copy-action@0.0.2
-        with:
-          # Source file
-          source: /tmp/artifacts/1.txt
-          # Target file
-          target: /test/artifact
+      
 
