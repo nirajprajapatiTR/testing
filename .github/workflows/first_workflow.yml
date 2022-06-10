@@ -38,6 +38,8 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo $Greeting $First_Name. Today is $DAY_OF_WEEK!
+          echo ${{ github.run_id }}
+          ech ${{ github.run_number }}
           
       - name: create dir
         run: mkdir /tmp/artifacts
