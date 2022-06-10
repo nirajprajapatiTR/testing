@@ -42,11 +42,16 @@ jobs:
       - name: create dir
         run: mkdir /tmp/artifacts
         
-      - uses: "finnp/create-file-action@master"
-        env:
-          FILE_NAME: "dir/fileName.txt"
-          FILE_DATA: "file content" 
-  
+      - name: "List file"
+        shell: bash
+        run: |
+          ls -R
+        
+ #     - uses: "finnp/create-file-action@master"
+ #       env:
+ #         FILE_NAME: "dir/fileName.txt"
+ #         FILE_DATA: "file content" 
+ # 
         
       
 
