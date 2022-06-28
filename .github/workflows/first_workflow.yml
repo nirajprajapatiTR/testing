@@ -39,6 +39,7 @@ jobs:
           echo test, and deploy your project.
           echo $Greeting $First_Name. Today is $DAY_OF_WEEK!
           echo ${{ github.run_id }}
+          echo ${{ github.event.repository.name }}
 
           
       - name: create dir
